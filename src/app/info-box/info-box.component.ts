@@ -9,7 +9,7 @@ export class InfoBoxComponent implements OnInit {
 
   constructor() { }
 
-  isHidden:boolean = true;
+  isHidden:boolean = false;
 
   ngOnInit() {
   }

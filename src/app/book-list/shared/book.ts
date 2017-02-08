@@ -5,7 +5,7 @@ export interface Book {
   abstract:string;
   numPages:number;
   author:string;
-  publisher:{
+  publisher?:{
     name:string;
     url:string;
   }

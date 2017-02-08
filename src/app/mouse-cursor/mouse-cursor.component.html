@@ -1,5 +1,8 @@
-<div (mousemove)="x=$event.clientX;y=$event.clientY" style="height: 400px; width: 400px; border: 1px solid"></div>
+<div style="display: inline-block;">
+<div (mousemove)="x=$event.clientX;y=$event.clientY" style="height: 400px; width: 400px; border: 1px solid; background-color: yellow;"></div>
 <span>X:{{x}} Y:{{y}}</span>
-
-<div (mousemove)="setCoordinates($event)" style="height: 400px; width: 400px; border: 1px solid"></div>
+</div>
+<div style="display: inline-block;">
+<div (mousemove)="setCoordinates($event)" style="height: 400px; width: 400px; border: 1px solid; background-color: red;"></div>
 <span>X:{{clientXPos}} Y:{{clientYPos}}</span>
+</div>

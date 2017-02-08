@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title:string = 'app works!';
-  titleVar:string = "value from a variable";
+  titleVar:string = "This title comes from a variable inside the AppComponent Class sent into the child component using @Input Decorator";
 
 
   handleCustomEvent ($event:String){
-    console.log($event);
+    //console.log($event);
+    alert($event.toString())
   }
 }

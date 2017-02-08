@@ -1,3 +1,5 @@
-<div [hidden]="isHidden">info box</div>
+<div style="height: 400px; width: 400px; border: 1px solid">
+  <div [hidden]="isHidden">Info Box</div>
+  <button (click)="isHidden=!isHidden">Toggle</button>
+</div>
 
-<button (click)="isHidden=!isHidden">click</button>
