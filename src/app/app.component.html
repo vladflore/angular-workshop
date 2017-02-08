@@ -6,6 +6,7 @@
 
 <mouse-cursor></mouse-cursor>
 
-<title-box title="direct from template"></title-box>
+<title-box title="direct from template" (titleClicked)="handleCustomEvent($event)"></title-box>
 <title-box [title]="titleVar"></title-box>
 
+<book-list></book-list>

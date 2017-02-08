@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title:string = 'app works!';
   titleVar:string = "value from a variable";
+
+
+  handleCustomEvent ($event:String){
+    console.log($event);
+  }
 }
