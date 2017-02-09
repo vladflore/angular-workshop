@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Book} from "./book";
 import {Observable} from "rxjs";
-import {Response, Http} from "@angular/http";
+import { Http} from "@angular/http";
 import 'rxjs/add/operator/map';
 import {tryCatch} from "rxjs/util/tryCatch";
 
@@ -55,6 +55,10 @@ export class BookDataService {
 
   getDynamicBooksObservable():Observable<Book[]>{
     return this.http.get('http://localhost:4730/books').map(response => response.json());
+  }
+
+  getBookByIsbn(isbn:string):Observable<Book>{
+    return this.http.get('http://localhost:4730/books/'+isbn).map(response => response.json());
   }
 
 }

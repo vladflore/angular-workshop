@@ -10,10 +10,11 @@ import { TitleBoxComponent } from './title-box/title-box.component';
 import { BookListComponent } from './book-list/book-list.component';
 import {BookDataService} from "./book-list/shared/book-data.service";
 import {routing} from "./app.routing";
+import { BookDetailComponent } from './book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent, InfoBoxComponent, MouseCursorComponent, TitleBoxComponent, BookListComponent
+    AppComponent, InfoBoxComponent, MouseCursorComponent, TitleBoxComponent, BookListComponent, BookDetailComponent
   ],
   imports: [
     BrowserModule,

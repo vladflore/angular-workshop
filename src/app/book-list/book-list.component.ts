@@ -26,13 +26,14 @@ export class BookListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log("OnInit");
+    console.log("BookListComponent OnInit");
     this.subscription = this.bookData.getDynamicBooksObservable().subscribe(books => this.books = books);
   }
 
   ngOnDestroy(){
-    console.log("OnDestroy");
+    console.log("BookListComponent OnDestroy");
     this.subscription.unsubscribe();
+    console.log("BookListComponent Subscription unsubscribe");
   }
 
 }

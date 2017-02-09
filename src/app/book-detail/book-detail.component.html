@@ -1,0 +1,7 @@
+<div *ngIf="book" style="height: 300px; width: 600px; border: 1px solid; background-color: #eeeeee;">
+  <h2>{{book.title}} by <small>{{book.author}}</small></h2>
+  <h3>{{book.subtitle}}</h3>
+  <h4>{{book.isbn}}</h4>
+  <a [routerLink]="['edit']">Edit</a>
+</div>
+<!--span>{{book?.title}}</span-->
