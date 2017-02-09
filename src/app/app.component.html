@@ -2,70 +2,15 @@
   Angular Workshop Munich 08.02.2017 - 10.02.2017
 </h1>
 
-<ul class="tab">
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'intro')">Intro</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'day1')">Day #1</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'day2')" id="defaultOpen">Day #2</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'day3')">Day #3</a></li>
-</ul>
+<!--
 
-
-<div id="intro" class="tabcontent">
-  <h3>Angular Workshop Intro</h3>
-  <p><a href="https://angularjs.de/" target="_blank">angularjs.de</a></p>
-</div>
-
-<div id="day1" class="tabcontent">
-  <h3>Angular Workshop Day One Tasks</h3>
-
-  <button class="accordion">Info Box - Property and Event Binding</button>
-  <div class="panel">
     <info-box></info-box>
-  </div>
 
-  <button class="accordion">Mouse Coordinates - Event Bind / $event Object</button>
-  <div class="panel">
     <mouse-cursor></mouse-cursor>
-  </div>
 
-  <button class="accordion">Title Box - @Input and @Output Decorators</button>
-  <div class="panel">
     <title-box title="This title comes from the AppComponent Template sent into the child component using @Input Decorator. Click me to emit the event to the parent using @Output Decorator." (titleClicked)="handleCustomEvent($event)"></title-box>
     <title-box [title]="titleVar"></title-box>
-  </div>
 
-  <button class="accordion">Books List - Using a Service (DI) which returns an array of Book Objects. Iterate over the books using *ngFor</button>
-  <div class="panel">
-    <!--book-list></book-list-->
-  </div>
-
-</div>
-
-<div id="day2" class="tabcontent">
-  <h3>Angular Workshop Day Two Tasks</h3>
-
-  <button class="accordion">Books List - Observable (same component as in Day #1) and Lifecycle Hooks</button>
-  <div class="panel">
-    <!--book-list></book-list-->
-  </div>
-
-  <button class="accordion">Router Outlet - load BookListComponent under /books</button>
-  <div class="panel">
-    <!--router-outlet></router-outlet-->
-  </div>
-
-  <button class="accordion">Jump to book /books/isbn</button>
-  <div class="panel">
-    <!--router-outlet></router-outlet-->
-  </div>
-
-</div>
-
-<div id="day3" class="tabcontent">
-  <h3>Angular Workshop Day Three Tasks</h3>
-</div>
-
-
-
-<router-outlet></router-outlet>
-
+    <book-list></book-list>
+-->
+    <router-outlet></router-outlet>

@@ -7,16 +7,19 @@ import {InfoBoxComponent} from "./info-box/info-box.component";
 import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
 import { TitleBoxComponent } from './title-box/title-box.component';
 import {routing} from "./app.routing";
+import {BookModule} from "./book/book.module";
+import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent, InfoBoxComponent, MouseCursorComponent, TitleBoxComponent
+    AppComponent, InfoBoxComponent, MouseCursorComponent, TitleBoxComponent, PageNotFoundComponentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    BookModule
   ],
   providers: [],
   bootstrap: [AppComponent]

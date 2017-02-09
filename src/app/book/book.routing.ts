@@ -4,7 +4,7 @@ import {Routes, RouterModule} from "@angular/router";
 import {BookDetailComponent} from "./book-detail/book-detail.component";
 
 const routes: Routes = [{
-  path: '',
+  path: 'books',
   component: BookComponent,
   children: [{
     component: BookListComponent,
@@ -15,4 +15,4 @@ const routes: Routes = [{
   }]
 }]
 
-export const routing = RouterModule.forChild(routes);
+export const booksRouting = RouterModule.forChild(routes);
