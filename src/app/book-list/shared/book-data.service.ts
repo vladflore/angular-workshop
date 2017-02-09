@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Book} from "./book";
+import {Observable} from "rxjs";
+import {Response, Http} from "@angular/http";
+import 'rxjs/add/operator/map';
+import {tryCatch} from "rxjs/util/tryCatch";
 
 @Injectable()
 export class BookDataService {
 
-  constructor() { }
+  constructor(private http:Http) {
+  }
 
   getBooks () {
     //Because the array contains objects of type Book, the objects MUST provide the information required by the interface. publisher Information can be omitted because the interface dictates so.
@@ -29,7 +34,7 @@ export class BookDataService {
         }
       },
       {
-        "title": "Eloquent JavaScript",
+        "title": "Eloquent JavaScript1",
         "subtitle": "A Modern Introduction to Programming",
         "isbn": "978-1-59327-584-6",
         "abstract": "JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
@@ -42,6 +47,14 @@ export class BookDataService {
       }];
 
     return books;
+  }
+
+  getStaticBooksObservable():Observable<Book[]>{
+    return Observable.of(this.getBooks());
+  }
+
+  getDynamicBooksObservable():Observable<Book[]>{
+    return this.http.get('http://localhost:4730/books').map(response => response.json());
   }
 
 }

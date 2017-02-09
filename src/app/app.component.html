@@ -3,9 +3,9 @@
 </h1>
 
 <ul class="tab">
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'intro')" id="defaultOpen">Intro</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'intro')">Intro</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'day1')">Day #1</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'day2')">Day #2</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'day2')" id="defaultOpen">Day #2</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'day3')">Day #3</a></li>
 </ul>
 
@@ -36,13 +36,24 @@
 
   <button class="accordion">Books List - Using a Service (DI) which returns an array of Book Objects. Iterate over the books using *ngFor</button>
   <div class="panel">
-    <book-list></book-list>
+    <!--book-list></book-list-->
   </div>
 
 </div>
 
 <div id="day2" class="tabcontent">
   <h3>Angular Workshop Day Two Tasks</h3>
+
+  <button class="accordion">Books List - Observable (same component as in Day #1) and Lifecycle Hooks</button>
+  <div class="panel">
+    <book-list></book-list>
+  </div>
+
+  <button class="accordion">Router Outlet - load BookListComponent under /books</button>
+  <div class="panel">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
 
 <div id="day3" class="tabcontent">
