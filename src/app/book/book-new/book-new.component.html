@@ -1,0 +1,6 @@
+<form [formGroup]="form" (ngSubmit)="addNewBook()">
+  <input type="text" formControlName="title">
+  <button [disabled]="!form.valid" type="submit">Add new book</button>
+</form>
+<button (click)="navigateToLibrary()">Back to books</button>
+

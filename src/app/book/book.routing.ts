@@ -4,11 +4,15 @@ import {Routes, RouterModule} from "@angular/router";
 import {BookDetailComponent} from "./book-detail/book-detail.component";
 import {ConfirmCandeactivateGuardService} from "./shared/confirm-candeactivate-guard.service";
 import {BookEditComponent} from "./book-edit/book-edit.component";
+import {BookNewComponent} from "./book-new/book-new.component";
 
 const routes: Routes = [{
   path: 'books',
   component: BookComponent,
   children: [{
+    component:BookNewComponent,
+    path:'new'
+  },{
     component: BookListComponent,
     path: ''
   },{
