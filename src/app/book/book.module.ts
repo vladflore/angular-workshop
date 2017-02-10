@@ -10,6 +10,7 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BookNewComponent } from './book-new/book-new.component';
 
+
 @NgModule({
   imports: [
     /*means that components in the BookModule module also have access to the Angular directives every app needs such as NgIf and NgFor.*/
