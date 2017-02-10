@@ -1,5 +1,6 @@
 import {Routes, RouterModule} from '@angular/router';
 import {PageNotFoundComponentComponent} from "./page-not-found-component/page-not-found-component.component";
+import {BookDetailComponent} from "./book/book-detail/book-detail.component";
 
 
 const routes: Routes = [

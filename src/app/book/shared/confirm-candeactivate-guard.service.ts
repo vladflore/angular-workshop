@@ -9,7 +9,8 @@ export class ConfirmCandeactivateGuardService implements CanDeactivate<BookDetai
 
   canDeactivate(component: BookDetailComponent, route: ActivatedRouteSnapshot, snapshot:RouterStateSnapshot){
     //params component: BookDetailComponent, route: ActivatedRouteSnapshot, snapshot:RouterStateSnapshot
-    return window.confirm("Are you sure?");
+    //return window.confirm("Are you sure?");
+    return true;
   }
 
 }
