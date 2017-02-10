@@ -1,9 +1,12 @@
 <div *ngIf="book">
-<form #form="ngForm">
-  <input
-    type="text"
-    [(ngModel)]="book.title"
-    name="title"
-    #title="ngModel">
-</form>
+  <form #editForm="ngForm" (ngSubmit)="saveBook(editForm.value)">
+    <input type="text" [(ngModel)]="book.title" name="title" #title="ngModel" required>
+    <input type="text" [(ngModel)]="book.isbn" name="isbn" #isbn="ngModel" required>
+    <input type="text" [(ngModel)]="book.author" name="author" #author="ngModel">
+
+    <button [disabled]="!editForm.valid" type="submit">Save</button>
+  </form>
+
+  <div [hidden]="!title.errors?.required || title.pristine"> Title is required </div>
+  <div [hidden]="!isbn.errors?.required || isbn.pristine"> ISBN is required </div>
 </div>

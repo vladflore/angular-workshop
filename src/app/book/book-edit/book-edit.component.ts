@@ -23,4 +23,9 @@ export class BookEditComponent implements OnInit {
     console.log("Get Book Data for ISBN");
     this.bookData.getBookByIsbn(this.isbn).subscribe(book => this.book=book);
   }
+
+  saveBook(formValues){
+    console.log("Saving book: " + formValues.isbn);
+    console.log(formValues);
+  }
 }
