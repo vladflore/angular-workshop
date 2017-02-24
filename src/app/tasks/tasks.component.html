@@ -1,0 +1,13 @@
+<div class="row content">
+  <div class="col-sm-3 sidenav">
+    <ul class="nav nav-pills nav-stacked">
+      <li id="infobox" [ngClass]="{'active': (sideNavCurrentSelected === 'infobox')}" (click)="makeActive($event)"><a [routerLink]="['info-box']">Info Box</a></li>
+      <li id="mousecursor" [ngClass]="{'active': (sideNavCurrentSelected === 'mousecursor')}" (click)="makeActive($event)"><a [routerLink]="['mouse-cursor']">Mouse Cursor</a></li>
+      <li id="titlebox" [ngClass]="{'active': (sideNavCurrentSelected === 'titlebox')}" (click)="makeActive($event)"><a [routerLink]="['title-box']">Title Box</a></li>
+      <li id="books" [ngClass]="{'active': (sideNavCurrentSelected === 'books')}" (click)="makeActive($event)"><a [routerLink]="['library']">Library</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-9">
+   <router-outlet></router-outlet>
+  </div>
+</div>

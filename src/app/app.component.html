@@ -1,16 +1,17 @@
-<h1>
-  Angular Workshop Munich 08.02.2017 - 10.02.2017
-</h1>
-
-<!--
-
-    <info-box></info-box>
-
-    <mouse-cursor></mouse-cursor>
-
-    <title-box title="This title comes from the AppComponent Template sent into the child component using @Input Decorator. Click me to emit the event to the parent using @Output Decorator." (titleClicked)="handleCustomEvent($event)"></title-box>
-    <title-box [title]="titleVar"></title-box>
-
-    <book-list></book-list>
--->
-    <router-outlet></router-outlet>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['info']" (click)="navCurrentSelected=''">Angular Workshop</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li id="tasks" [ngClass]="{'active': (navCurrentSelected === 'tasks')}" (click)="makeActive($event)"><a [routerLink]="['tasks']">Tasks</a></li>
+        <li id="info" [ngClass]="{'active': (navCurrentSelected === 'info')}" (click)="makeActive($event)"><a [routerLink]="['info']">Info</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Some Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

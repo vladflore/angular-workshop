@@ -1,27 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AppComponent } from './app.component';
-import {InfoBoxComponent} from "./info-box/info-box.component";
-import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
-import { TitleBoxComponent } from './title-box/title-box.component';
-import {routing} from "./app.routing";
-import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
-import {BookModule} from "./book/book.module";
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {AppComponent} from './app.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found-component';
+import {TasksModule} from "./tasks/tasks.module";
+import {InfoModule} from "./info/info.module";
+
+import {appRouting} from "./app.routing";
 
 @NgModule({
   declarations: [
-    AppComponent, InfoBoxComponent, MouseCursorComponent, TitleBoxComponent, PageNotFoundComponentComponent
+    AppComponent, PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
-    BookModule
+
+    TasksModule,
+    InfoModule,
+
+    appRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

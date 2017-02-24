@@ -1,12 +1,15 @@
 import {Routes, RouterModule} from '@angular/router';
-import {PageNotFoundComponentComponent} from "./page-not-found-component/page-not-found-component.component";
-import {BookDetailComponent} from "./book/book-detail/book-detail.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found-component";
+import {TasksComponent} from "./tasks/tasks.component";
+import {InfoComponent} from "./info/info.component";
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/books', pathMatch: 'full'}/*,
+  {path: '', redirectTo: '/tasks', pathMatch: 'full'}/*,
   {path: 'books', loadChildren: './book/book.module#BookModule'}*/,
-  {path: '**', component: PageNotFoundComponentComponent}
+  {path: 'tasks', component: TasksComponent},
+  {path: 'info', component: InfoComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const appRouting = RouterModule.forRoot(routes);
